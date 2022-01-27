@@ -6,11 +6,11 @@ import store from './store';
 import Catalog from './components/Catalog';
 
 function App() {
-	return (
-		<Provider store={store}>
-			<Catalog />
-		</Provider>
-	);
+    return (
+        <Provider store={store}>
+            <Catalog />
+        </Provider>
+    );
 }
 
 export default App;
