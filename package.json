@@ -10,6 +10,7 @@
     "@types/node": "^17.0.12",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "axios": "^0.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
@@ -25,7 +26,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint . 'src/**/*.ts?(x)'",
     "lint:fix": "eslint . 'src/**/*.ts?(x)' --fix",
-    "server":"json-server server.json -p 3333"
+    "server": "json-server server.json -p 3333"
   },
   "browserslist": {
     "production": [
