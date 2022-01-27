@@ -24,5 +24,10 @@
         "@typescript-eslint/indent": [
             "error"
         ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
