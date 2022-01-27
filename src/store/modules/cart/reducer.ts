@@ -17,9 +17,10 @@ const cart: Reducer<Cart> = (state = INITIAL_STATE, action) => // eslint-disable
 
                 if (productCartIndex >= 0) {
                     draft.items[productCartIndex].quantity += 1;
+                } else {
+                    draft.items.push({product, quantity: 1});
                 }
 
-                draft.items.push({product, quantity: 1});
                 break;
             }
 
