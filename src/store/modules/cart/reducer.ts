@@ -1,7 +1,7 @@
 import {Reducer} from 'redux';
 import produce from 'immer';
 
-import {Cart} from './types';
+import {Cart, ActionTypes} from './types';
 
 const INITIAL_STATE: Cart = {
     items: [],
@@ -11,7 +11,7 @@ const INITIAL_STATE: Cart = {
 const cart: Reducer<Cart> = (state = INITIAL_STATE, action) => // eslint-disable-line default-param-last
     produce(state, draft => {
         switch (action.type) {
-            case 'ADD_PRODUCT_TO_CART_SUCCESS': {
+            case ActionTypes.addProductToCartRequest: {
                 const {product} = action.payload;
 
                 const productCartIndex = draft.items.findIndex(item => item.product.id === product.id);
@@ -25,7 +25,7 @@ const cart: Reducer<Cart> = (state = INITIAL_STATE, action) => // eslint-disable
                 break;
             }
 
-            case 'ADD_PRODUCT_TO_CART_FAILURE': {
+            case ActionTypes.addProductToCartFailure: {
                 draft.unavaibleItems.push(action.payload.productID);
 
                 break;
