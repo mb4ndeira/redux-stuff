@@ -5,6 +5,7 @@ import {Cart} from './types';
 
 const INITIAL_STATE: Cart = {
     items: [],
+    unavaibleItems: [],
 };
 
 const cart: Reducer<Cart> = (state = INITIAL_STATE, action) => // eslint-disable-line default-param-last
@@ -25,6 +26,8 @@ const cart: Reducer<Cart> = (state = INITIAL_STATE, action) => // eslint-disable
             }
 
             case 'ADD_PRODUCT_TO_CART_FAILURE': {
+                draft.unavaibleItems.push(action.payload.productID);
+
                 break;
             }
 
